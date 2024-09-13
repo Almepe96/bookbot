@@ -5,10 +5,14 @@ def main():
     each_letter = letter_count(text)            #list of dictionaries
     sorted_letters = sort_letters(each_letter)
 <<<<<<< HEAD
+<<<<<<< HEAD
     word_report(path, num_words, sorted_letters)
 =======
     print(sorted_letters)
 #    word_report(path, num_words, sorted_letters)
+=======
+    word_report(path, num_words, sorted_letters)
+>>>>>>> 512bcdc (Functional ordered report)
 
 
 
@@ -38,9 +42,8 @@ def sort_letters(dict):
 def word_report(path, num_words, each_letter):
     print(f"--- Begin report of {path} ---")
     print(f"{num_words} words found in the document")
-    for dict in each_letter:
-        for k in dict:
-            print(f"The {k} character was found {dict[k]} times")
+    for letter_dict in each_letter:
+        print(f"The {letter_dict['char']} character was found {letter_dict['num']} times")
     print("--- End report ---")
 
     k, v = dict.items()
