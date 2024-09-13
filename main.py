@@ -5,14 +5,9 @@ def main():
     each_letter = letter_count(text)            #list of dictionaries
     sorted_letters = sort_letters(each_letter)
     word_report(path, num_words, sorted_letters)
-    print(sorted_letters)
-#    word_report(path, num_words, sorted_letters)
 
-
-
-def sort_on(dict):
-    return dict["num"]
-
+def sort_on(letter_dict):
+    return letter_dict["num"]
 
 def sort_letters(dict):
     sorted_list = []
@@ -20,10 +15,6 @@ def sort_letters(dict):
         sorted_list.append({"char":k, "num":dict[k]})
     sorted_list.sort(reverse=True, key=sort_on)
     return sorted_list
-   
-
-
-
 
 def word_report(path, num_words, each_letter):
     print(f"--- Begin report of {path} ---")
@@ -31,17 +22,6 @@ def word_report(path, num_words, each_letter):
     for letter_dict in each_letter:
         print(f"The {letter_dict['char']} character was found {letter_dict['num']} times")
     print("--- End report ---")
-
-    k, v = dict.items()
-    return v
-
-
-
-def sort_letters(dict):
-    return dict#.sort(key=sort_on, reverse=True)
-
-
-
 
 def letter_count(text):
     letter_count = {}
