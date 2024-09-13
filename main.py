@@ -4,16 +4,9 @@ def main():
     num_words = word_count(text)
     each_letter = letter_count(text)            #list of dictionaries
     sorted_letters = sort_letters(each_letter)
-<<<<<<< HEAD
-<<<<<<< HEAD
     word_report(path, num_words, sorted_letters)
-=======
     print(sorted_letters)
 #    word_report(path, num_words, sorted_letters)
-=======
-    word_report(path, num_words, sorted_letters)
->>>>>>> 512bcdc (Functional ordered report)
-
 
 
 
@@ -30,13 +23,6 @@ def sort_letters(dict):
    
 
 
-
-
-
-
-
-
->>>>>>> ff91550 (List Sorted)
 
 
 def word_report(path, num_words, each_letter):
