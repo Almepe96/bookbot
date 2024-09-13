@@ -17,11 +17,6 @@ def word_report(path, num_words, each_letter):
         print(f"The {k} character was found {each_letter[k]} times")
     
     
-    
-    
-    
-    
-    
     print("--- End report ---")
 
 
@@ -34,10 +29,11 @@ def letter_count(text):
     letter_count = {}
     text = text.lower()
     for char in text:
-        if char in letter_count:
-            letter_count[char] += 1
-        else:
-            letter_count[char] = 1
+        if char.isalpha():
+            if char in letter_count:
+                letter_count[char] += 1
+            else:
+                letter_count[char] = 1
     return letter_count
 
 
