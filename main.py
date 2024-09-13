@@ -4,7 +4,35 @@ def main():
     num_words = word_count(text)
     each_letter = letter_count(text)            #list of dictionaries
     sorted_letters = sort_letters(each_letter)
+<<<<<<< HEAD
     word_report(path, num_words, sorted_letters)
+=======
+    print(sorted_letters)
+#    word_report(path, num_words, sorted_letters)
+
+
+
+
+def sort_on(dict):
+    return dict["num"]
+
+
+def sort_letters(dict):
+    sorted_list = []
+    for k in dict:
+        sorted_list.append({"char":k, "num":dict[k]})
+    sorted_list.sort(reverse=True, key=sort_on)
+    return sorted_list
+   
+
+
+
+
+
+
+
+
+>>>>>>> ff91550 (List Sorted)
 
 
 def word_report(path, num_words, each_letter):
@@ -28,7 +56,6 @@ def sort_letters(dict):
 
 def letter_count(text):
     letter_count = {}
-    letter_list = []
     text = text.lower()
     for char in text:
         if char.isalpha():
@@ -36,10 +63,7 @@ def letter_count(text):
                 letter_count[char] += 1
             else:
                 letter_count[char] = 1
-    for k in letter_count:
-        letter_list.append({k:letter_count[k]})
-    print (letter_list)
-    return letter_list
+    return letter_count
 
 
 def word_count(text):
